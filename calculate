@@ -1,0 +1,49 @@
+def summ(a, b):
+    result = a + b
+    return result
+
+def diff(a, b):
+    result = a - b
+    return result
+
+def multi(a, b):
+    result = a * b
+    return result
+
+def div(a, b):
+    result = a / b
+    return result
+
+def pow(a, b):
+    result = a ** b
+    return result
+
+def ask():
+    message = "Введите операцию: "
+    move = input(message)
+    return move
+
+def calculate(a, b, move):
+    result = None
+    if move == "+":
+        result = summ(a, b)
+    elif move == "-":
+        result = diff(a, b)
+    elif move == "*":
+        result = multi(a, b)
+    elif move == "/": 
+        result = div(a, b)
+    elif move == "**":
+        result = pow(a, b)
+    else:
+        print("not found")
+    return result
+
+
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+move = ask()
+result = calculate(a, b, move)
+print('Результат вычислений: ', result)
+
+
